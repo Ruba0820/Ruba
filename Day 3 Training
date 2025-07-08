@@ -1,0 +1,36 @@
+leetcode problem-1
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++){
+                if (nums[i] + nums[j] == target) {
+                    return new int[] { i, j };
+                }
+            }
+        }
+        return new int[] {};  
+    }
+       
+}
+
+leetcode problem -69
+class Solution {
+    public int mySqrt(int x) {
+        int i = 0;
+        while ((long)i * i <= x) {
+            i++;
+        }
+        return i - 1; 
+    }
+}
+
+
+ leetcode problem 88
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        for (int i = 0; i < n; i++) {
+            nums1[m + i] = nums2[i];
+        }
+        Arrays.sort(nums1);       
+    }
+}
